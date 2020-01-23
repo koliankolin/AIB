@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Predictions</title>
-</head>
-<body>
+{% extends "layout.html" %}
+{% block content %}
     {% for pred in preds %}
         <p>Home team: {{ pred.home_team }}</p>
         <p>Away team: {{ pred.away_team }}</p>
@@ -13,5 +8,4 @@
         <p>Home team pred goals: {{ pred.pred_home_goals }}</p>
         <p>Away team pred goals: {{ pred.pred_away_goals }}</p>
     {% endfor %}
-</body>
-</html>
+{% endblock %}
